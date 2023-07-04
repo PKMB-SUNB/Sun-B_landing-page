@@ -1,0 +1,43 @@
+:root {
+    --nav-background: #B64A26;
+    --nav-text: #fff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+nav {
+    background-color: var(--nav-background);
+}
+
+.navbar-container {
+    max-width: 1200px;
+    /* middle positioning */
+    margin-left: auto;
+    margin-right: auto;
+    /* break between item */
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-logo {
+    max-width: 193;
+    max-height: 128;
+}
+
+.navbar-link {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+    align-items: center;
+    gap: 50px;
+}
+
+.navbar-link-item {
+    color: var(--nav-text);
+}
+
+a:link {
+    text-decoration: none;
+}
