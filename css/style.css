@@ -2,16 +2,20 @@
     --nav-background: #B64A26;
     --white: #fff;
     --background-dark: #8E2800;
+    --background-light: #FDF6E8;
+    --font-dark: #8F2901;
     --btn-yellow: #F3C500;
 
     --p-20: 120px;
 
     --fs-xl: 5rem;
+    --fs-l: 3rem;
 }
 
 @media screen and (max-width: 680px) {
     :root {
         --fs-xl: 3rem;
+        --fs-l: 2rem;
     }
 }
 
@@ -19,6 +23,7 @@
 body {
     font-family: 'Inter', sans-serif;
     font-family: 'Outfit', sans-serif;
+    background-color: var(--background-light);
 }
 
 img {
@@ -95,8 +100,9 @@ a:link {
 }
 
 .hero-link {
+    max-width: 160px;
     display: flex;
-    gap: 16px;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 
@@ -147,4 +153,51 @@ a:link {
     .hero-text {
         grid-area: hero-text;
     }
+}
+
+/* ingredient */
+
+.ingredient {
+    background-color: var(--background-light);
+}
+
+.ingredient-title {
+    font-family: Outfit;
+    font-style: normal;
+    text-align: center;
+    font-size: var(--fs-l);
+    color: var(--background-dark);
+}
+
+.ingredient-container {
+    background-color: var(--background-light);
+    margin: 0 auto 40px auto;
+    padding: 0 40px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 56px;
+}
+
+/* for dekstop */
+@media screen and (min-width: 890px) {
+    .ingredient-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.ingredient-card{
+    max-width: 300px;
+    text-align: center;
+}
+
+.ingredient-card img{
+    border-radius: 100%;
+}
+
+.ingredient-card h3{
+    color: var(--font-dark);
+    font-size: 30px;
 }
