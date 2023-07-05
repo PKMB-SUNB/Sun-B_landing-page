@@ -10,12 +10,14 @@
 
     --fs-xl: 5rem;
     --fs-l: 3rem;
+    --fs-m: 2rem;
 }
 
 @media screen and (max-width: 680px) {
     :root {
         --fs-xl: 3rem;
         --fs-l: 2rem;
+        --fs-m: 1.5rem;
     }
 }
 
@@ -200,4 +202,54 @@ a:link {
 .ingredient-card h3{
     color: var(--font-dark);
     font-size: 30px;
+}
+
+/* statistics */
+.graph-card {
+    background-color: var(--background-dark);
+    max-width: 1200px;
+    border-radius: 16px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 0 auto 40px auto;
+    padding: 40px 60px;
+    max-width: fit-content;
+}
+
+@media screen and (max-width: 890px) {
+    .graph-card {
+        border-radius: 0px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.graph-card h2,
+.graph-card p {
+    color: var(--white);
+}
+
+.graph-card h2 {
+    font-size: var(--fs-m);
+    margin: 0;
+}
+
+.graph-card img {
+    margin: 0 0;
+    border-radius: 18px;
+}
+
+@media screen and (max-width: 890px) {
+    .graph-card {
+        text-align: center;
+        padding: 40px;
+    }
+
+    .graph-card h2 {
+        font-size: var(--fs-m);
+    }
+    
+    .graph-card img {
+        margin: 0;
+        border-radius: 0px;
+    }
 }
