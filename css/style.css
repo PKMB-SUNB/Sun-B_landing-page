@@ -11,6 +11,7 @@
     --fs-xl: 5rem;
     --fs-l: 3rem;
     --fs-m: 2rem;
+    --fs-s: 1.5rem;
 }
 
 @media screen and (max-width: 680px) {
@@ -18,6 +19,7 @@
         --fs-xl: 3rem;
         --fs-l: 2rem;
         --fs-m: 1.5rem;
+        --fs-s: 1.25rem;
     }
 }
 
@@ -158,7 +160,7 @@ a:link {
 }
 
 /* ingredient */
-
+/* (mobile first) */
 .ingredient {
     background-color: var(--background-light);
 }
@@ -251,5 +253,72 @@ a:link {
     .graph-card img {
         margin: 0;
         border-radius: 0px;
+    }
+}
+
+/* article */
+.articles-header {
+    text-align: center;
+    font-family: Outfit;
+    font-style: normal;
+    text-align: center;
+    font-size: var(--fs-l);
+    color: var(--background-dark);
+}
+
+.articles {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.article-card {
+    max-width: 380px;
+    margin: 0 20px 40px;
+    padding: 36px 32px;
+    border-radius: 16px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.article-card:hover {
+    background-color: var(--background-dark);
+    color: var(--white);
+}
+
+.article-card h3 {
+    font-size: var(--fs-s);
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.article-card img {
+    border-radius: 16px;
+}
+
+.article-card a {
+    color: inherit;
+}
+
+.card-inside-link:hover {
+    text-decoration: underline;
+}
+
+/* for dekstop */
+@media screen and (min-width: 1140px) {
+    .articles {
+        margin: auto;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .article-card {
+        max-width: 380px;
+        min-height: 480px;
+        margin: 0 0 40px;
+        padding: 36px 32px;
+        border-radius: 16px;
     }
 }
