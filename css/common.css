@@ -1,0 +1,40 @@
+:root {
+    --nav-background: #B64A26;
+    --white: #fff;
+    --background-dark: #8E2800;
+    --background-light: #FDF6E8;
+    --font-dark: #8F2901;
+    --btn-yellow: #F3C500;
+
+    --p-20: 120px;
+
+    --fs-xl: 5rem;
+    --fs-l: 3rem;
+    --fs-m: 2rem;
+    --fs-s: 1.5rem;
+}
+
+@media screen and (max-width: 680px) {
+    :root {
+        --fs-xl: 3rem;
+        --fs-l: 2rem;
+        --fs-m: 1.5rem;
+        --fs-s: 1.25rem;
+    }
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--background-light);
+}
+
+img {
+    max-width: 100%;
+    margin: auto 0;
+}
+
+a:link {
+    text-decoration: none;
+}

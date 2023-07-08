@@ -1,0 +1,33 @@
+/* footer */
+footer {
+    background-color: var(--background-dark);
+}
+
+.footer-container {
+    max-width: 1200px;
+    font-family: Outfit;
+    font-style: normal;
+    color: var(--white);
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.footer-col p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: normal;
+}
+
+.footer-col a {
+    display: block;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 890px) {
+    .footer-container {
+        flex-direction: column;
+        padding: 40px;
+    }
+}
