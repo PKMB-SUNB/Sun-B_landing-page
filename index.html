@@ -17,7 +17,9 @@
 <body>
     <nav class="navbar" x-data="{open: false}">
         <div class="navbar-container">
-            <img src="./image/logo-navbar.png" alt="logo" class="navbar-logo">
+            <a href="./index.html">
+                <img src="./image/logo-navbar.png" alt="logo" class="navbar-logo">
+            </a>
             <div class="navbar-link">
                 <a class="navbar-toggle" @click="open = !open"><img src="./image/navbar-icon.svg" alt=""></a>
                 <a href="" class="navbar-link-item" :class="{'hidden-mobile': !open}">Our product</a>
