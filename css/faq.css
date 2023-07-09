@@ -1,0 +1,63 @@
+:root {
+    --nav-background: #B64A26;
+    --white: #fff;
+    --background-dark: #8E2800;
+    --background-light: #FDF6E8;
+    --font-dark: #8F2901;
+    --btn-yellow: #F3C500;
+
+    --p-20: 120px;
+
+    --fs-xl: 4rem;
+    --fs-l: 3rem;
+    --fs-m: 2rem;
+    --fs-s: 1.5rem;
+}
+
+@media screen and (max-width: 680px) {
+    :root {
+        --fs-xxl: 3rem;
+        --fs-xl: 2.5rem;
+        --fs-l: 2rem;
+        --fs-m: 1.5rem;
+        --fs-s: 1.25rem;
+    }
+}
+
+.faq-header {
+    background-color: var(--background-dark);
+}
+
+.faq-container {
+    max-width: 1200px;
+    padding: 40px;
+    color: var(--white);
+    margin: 0 auto;
+}
+
+.faq-header h1 {
+    color: var(--white);
+    font-size: var(--fs-xl);
+    font-family: Outfit;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    margin: 0 0;
+}
+
+.faq-content {
+    margin: 40px 0;
+}
+
+.faq-card {
+    max-width: 1200px;
+    margin: 0 auto 32px;
+    padding: 16px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    color: var(--font-dark);
+    border-radius: 32px;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.10), 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+}
