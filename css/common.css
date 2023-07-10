@@ -38,3 +38,13 @@ img {
 a:link {
     text-decoration: none;
 }
+
+.px-20 {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mx-20 {
+    margin-right: 20px;
+    margin-left: 20px;
+}
