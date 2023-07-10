@@ -57,9 +57,11 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--white);
-    color: var(--font-dark);
     border-radius: 32px;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.10), 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+    
+    color: var(--font-dark);
+    font-size: 18px;
 }
 
 .answer-card {
@@ -76,5 +78,5 @@
     margin: 8px 0;
     font-style: normal;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 18px;
 }
