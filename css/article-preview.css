@@ -18,9 +18,13 @@
 
 .article-card {
     max-width: 380px;
+    max-height: 480px;
     margin: 0 20px 40px;
     padding: 36px 32px;
     border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .article-card:hover {
@@ -54,13 +58,18 @@
         margin: auto;
         flex-direction: row;
         justify-content: space-between;
+        margin: 60px auto;
     }
 
     .article-card {
         max-width: 380px;
         min-height: 480px;
-        margin: 0 0 40px;
+        margin: 0 0;
         padding: 36px 32px;
         border-radius: 16px;
+    }
+
+    .card-inside-link {
+        text-align: right;
     }
 }
