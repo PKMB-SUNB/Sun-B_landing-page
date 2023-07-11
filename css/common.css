@@ -12,6 +12,7 @@
     --fs-l: 3rem;
     --fs-m: 2rem;
     --fs-s: 1.5rem;
+    --fs-xs: 1.25rem;
 }
 
 @media screen and (max-width: 680px) {
@@ -20,6 +21,7 @@
         --fs-l: 2rem;
         --fs-m: 1.5rem;
         --fs-s: 1.25rem;
+        --fs-xs: 1rem;
     }
 }
 
