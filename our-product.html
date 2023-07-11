@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Home</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+		integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/nav-style.css">
+	<link rel="stylesheet" href="./css/our-product.css">
+	<link rel="stylesheet" href="./css/footer-style.css">
+	<link rel="stylesheet" href="./css/article-preview.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;700&family=Roboto:wght@300;700&display=swap');
+	</style>
+
+	<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+	<nav class="navbar" x-data="{open: false}">
+		<div class="navbar-container">
+			<a href="./index.html">
+				<img src="./image/logo-navbar.png" alt="logo" class="navbar-logo">
+			</a>
+			<div class="navbar-link">
+				<a class="navbar-toggle" @click="open = !open"><img src="./image/navbar-icon.svg" alt=""></a>
+				<a href="our-product.html" class="navbar-link-item" :class="{'hidden-mobile': !open}">Our product</a>
+				<a href="" class="navbar-link-item" :class="{'hidden-mobile': !open}">Nutrition</a>
+				<a href="" class="navbar-link-item" :class="{'hidden-mobile': !open}">Articles</a>
+				<a href="./faq.html" class="navbar-link-item" :class="{'hidden-mobile': !open}">FAQ</a>
+			</div>
+		</div>
+	</nav>
+
+	<section class="hero">
+		<div class="hero-container">
+			<div class="hero-text">
+				<h1 class="hero-title">Sun-B Cereal Snack </h1>
+				<div class="hero-link">
+					<a href="" class="hero-link-item">
+						<img src="./image/shopee.svg" alt="" class="hero-link-item-img">
+					</a>
+					<a href="" class="hero-link-item">
+						<img src="./image/tokped.svg" alt="" class="hero-link-item-img">
+					</a>
+					<a href="" class="hero-link-item">
+						<img src="./image/ig.svg" alt="" class="hero-link-item-img">
+					</a>
+				</div>
+				<a href="" class="hero-cta-btn">Buy Now</a>
+			</div>
+			<img src="./image/product.png" alt="" srcset="" class="hero-img">
+		</div>
+		<br>
+	</section>
+
+	<section class="text-container">
+		<p class="text-pg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus
+			consequat
+			consectetur.
+			Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque aliquet nibh, vel
+			condimentum
+			nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus enim tristique. </p>
+	</section>
+
+	<section class="benefit">
+		<h2 class="text-h2">Benefits</h2>
+		<div class="benefit-container">
+			<div class="benefit-card">
+				<img src="./image/benefit-icon.svg" alt="" class="benefit-img">
+				<div class="benefit-text">
+					<h3>Lorem</h3>
+					<p>Lorem ipsum dolor sit amet</p>
+				</div>
+			</div>
+
+			<div class="benefit-card">
+				<img src="./image/benefit-icon.svg" alt="" class="benefit-img">
+				<div class="benefit-text">
+					<h3>Lorem</h3>
+					<p>Lorem ipsum dolor sit amet</p>
+				</div>
+			</div>
+
+			<div class="benefit-card">
+				<img src="./image/benefit-icon.svg" alt="" class="benefit-img">
+				<div class="benefit-text">
+					<h3>Lorem</h3>
+					<p>Lorem ipsum dolor sit amet</p>
+				</div>
+			</div>
+
+			<div class="benefit-card">
+				<img src="./image/benefit-icon.svg" alt="" class="benefit-img">
+				<div class="benefit-text">
+					<h3>Lorem</h3>
+					<p>Lorem ipsum dolor sit amet</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="text-container mb-40">
+		<h2 class="text-h2">Ingredients</h2>
+		<p class="text-pg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus
+			consequat
+			consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque aliquet
+			nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus enim tristique.
+		</p>
+		<p class="ingredient-disclaimer">*Percent Daily Values are based on a 2,000 calorie diet. Your daily values may
+			be higher or lower depending on your calorie needs.</p>
+	</section>
+
+	<div class="table-container">
+		<div class="table-outer">
+			<table class="tg">
+				<thead>
+					<tr>
+						<th class="tg-0lax">Nutritional Facts</th>
+						<th class="tg-0lax"></th>
+						<th class="text-right pr-20">NRV*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="row-outer">
+						<td class="tg-0lax">Total Fat</td>
+						<td class="text-right">1 g</td>
+						<td class="text-right"></td>
+					</tr>
+					<tr class="row-outer">
+						<td class="tg-0lax">Saturated Fat</td>
+						<td class="text-right">0 g</td>
+						<td class="text-right">0%</td>
+					</tr>
+					<tr class="row-outer">
+						<td class="tg-0lax">Trans Fat</td>
+						<td class="text-right">0 g</td>
+						<td class="text-right"></td>
+					</tr>
+					<tr class="row-outer">
+						<td class="tg-0lax">Cholesterol Fat</td>
+						<td class="text-right">0 mg</td>
+						<td class="text-right">0%</td>
+					</tr>
+					<tr class="row-outer">
+						<td class="tg-0lax">Sodium</td>
+						<td class="text-right">0 mg</td>
+						<td class="text-right">0%</td>
+					</tr>
+					<tr class="row-outer">
+						<td class="tg-0lax">Total Carbohydrate</td>
+						<td class="text-right">8 g</td>
+						<td class="text-right">3%</td>
+					</tr>
+					<tr class="row-outer">
+						<td class="tg-0lax">Dietary Fiber</td>
+						<td class="text-right">0 g</td>
+						<td class="text-right">0%</td>
+					</tr>
+					<tr class="row-outer">
+						<td class="tg-0lax">Sugars</td>
+						<td class="text-right">1 g</td>
+						<td class="text-right"></td>
+					</tr>
+					<tr class="row-outer">
+						<td class="tg-0lax">Protein</td>
+						<td class="text-right">1 g</td>
+						<td class="text-right"></td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="disclaimer">* Nutrient Reference Value (NRV)</p>
+		</div>
+
+		<div class="table-outer">
+			<table class="tg">
+				<thead>
+					<tr>
+						<th class="tg-0lax">Vitamin & Mineral</th>
+						<th class="text-right">%AKG*</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="row-outer">
+						<td class="tg-0lax">Vitamin A</td>
+						<td class="text-right">0%</td>
+					</tr>
+					<tr class="row-outer">
+						<td class="tg-0lax">Calcium</td>
+						<td class="text-right">0%</td>
+					</tr>
+					<tr class="row-outer">
+						<td class="tg-0lax">Vitamin C</td>
+						<td class="text-right">0%</td>
+					</tr>
+					<tr class="row-outer">
+						<td class="tg-0lax">Iron</td>
+						<td class="text-right">0%</td>
+					</tr>
+				</tbody>
+			</table>
+			<p class="disclaimer">*Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs.</p>
+		</div>
+	</div>
+
+	<h2 class="articles-header">Your Guide to a Healthy Pregnancy</h2>
+	<article class="articles">
+		<div class="article-card">
+			<a href="">
+				<img src="./image/article-1.png" alt="">
+				<h3>Nutrisi ibu hamil dan pertumbuhan janin</h3>
+				<a href="" class="card-inside-link">Read more ➜</a>
+			</a>
+		</div>
+		<div class="article-card">
+			<a href="">
+				<img src="./image/article-2.png" alt="">
+				<h3>Kesehatan anak dan pencegahan stunting</h3>
+				<a href="" class="card-inside-link">Read more ➜</a>
+			</a>
+		</div>
+		<div class="article-card">
+			<a href="">
+				<img src="./image/article-3.png" alt="">
+				<h3>Gerakan buMil sehat</h3>
+			</a>
+			<a href="" class="card-inside-link">Read more ➜</a>
+		</div>
+	</article>
+
+	<footer>
+		<div class="footer-container">
+			<img src="./image/logo-navbar.png" alt="logo" class="navbar-logo">
+			<div class="footer-col">
+				<p>Product</p>
+				<a href="">Home</a>
+				<a href="">About</a>
+			</div>
+
+			<div class="footer-col">
+				<p>Market</p>
+				<a href="">Shopee</a>
+				<a href="">Tokopedia</a>
+				<a href="">Instagram</a>
+			</div>
+
+			<div class="footer-col">
+				<p>Contact</p>
+				<a href="">Email</a>
+				<a href="">Instagram</a>
+			</div>
+
+			<div class="footer-col">
+				<p>Join our newsletter</p>
+				<div class="newsletter-form">
+
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+</html>

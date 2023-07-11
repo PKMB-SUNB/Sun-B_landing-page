@@ -1,0 +1,229 @@
+/* hero */
+.hero {
+    background-color: var(--background-dark);
+    margin-bottom: 40px;
+}
+
+.hero-container {
+    background-color: var(--background-dark);
+    margin: 0 auto 40px auto;
+    padding: 40px 40px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero h1 {
+    max-width: 750px;
+    color: var(--white);
+    font-size: var(--fs-xl);
+    font-family: Outfit;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    margin-bottom: 40px;
+}
+
+.hero-link {
+    max-width: 160px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.hero-link-item {
+    min-width: 38px;
+    min-height: 38px;
+    flex-shrink: 0;
+    border-radius: 38px;
+    background: var(--btn-yellow);
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-link-item-img {
+    margin: auto;
+}
+
+.hero-cta-btn {
+    display: block;
+    text-decoration: none;
+    max-width: fit-content;
+    background-color: var(--btn-yellow);
+    color: black;
+    padding: 15px 50px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 890px) {
+    .hero-container {
+        margin: 0 auto;
+        padding: 0 40px;
+        max-width: 1200px;
+        display: grid;
+        grid-template-areas: 
+            ".hero-text"
+            ".hero-img"
+            ;
+    }
+
+    .hero-img {
+        grid-area: hero-img;
+    }
+
+    .hero-text {
+        grid-area: hero-text;
+    }
+}
+
+/* ===Text=== */
+.text-container {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 40px;
+    text-align: justify;
+    font-size: var(--fs-xs);
+}
+
+.text-h2 {
+    color: var(--font-dark);
+    text-align: center;
+    font-size: var(--fs-l);
+    margin: 60px auto;
+}
+
+.text-pg {
+    color: var(--font-dark);
+    font-family: Inter;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.ingredient-disclaimer {
+    font-family: Roboto;
+    font-size: 16px;
+    text-align: right;
+    margin: 60px 0;
+}
+
+/* ===Benefits */
+.benefit-container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 700px) {
+    .benefit-container {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.benefit-card {
+    display: flex;
+    margin: 0 auto;
+}
+
+.benefit-card h3 {
+    font-size: var(--fs-s);
+    color: var(--font-dark);
+}
+
+.benefit-card p {
+    font-size: var(--fs-xs);
+    font-family: Inter;
+    color: var(--font-dark);
+}
+
+.benefit-img {
+    margin-right: 10px
+}
+
+/* ===Table=== */
+
+.table-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px 20px;
+    row-gap: 20px;
+}
+
+@media screen and (min-width: 700px) {
+    .table-container {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 40px 20px;
+    }
+
+    .table-outer {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .table-container {
+        margin: 0 auto 20px;
+    }
+}
+
+.table-outer {
+    padding: 0 20px 20px;
+    margin-bottom: 60px;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.tg td {
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 20px 10px 5px;
+    word-break: normal;
+}
+
+.tg th {
+    font-size: 14px;
+    font-weight: 700;
+    overflow: hidden;
+    padding: 10px 10px 10px 5px;
+    word-break: normal;
+}
+
+.text-right {
+    text-align: right;
+    vertical-align: top;
+    font-family: Roboto;
+    font-weight: 700;
+}
+
+.tg-0lax {
+    text-align: left;
+    vertical-align: top;
+    font-family: Inter;
+}
+
+.table-outer,
+.row-outer {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+.disclaimer {
+    color: var(--font-dark);
+    text-align: justify;
+    font-family: Inter;
+}
