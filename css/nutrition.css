@@ -126,8 +126,8 @@
         position: absolute;
         z-index: 2;
         top: -80px;
-        min-width: 240px;
-        min-height: 240px;
+        min-width: 300px;
+        min-height: 300px;
         border-radius: 18px;
     }
 }
