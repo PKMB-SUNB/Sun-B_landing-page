@@ -9,17 +9,15 @@
 }
 
 .articles {
+    display: grid;
     max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin: 60px auto;
 }
 
 .article-card {
     max-width: 380px;
     max-height: 480px;
-    margin: 0 20px 40px;
+    margin: 0 auto 40px;
     padding: 36px 32px;
     border-radius: 16px;
     display: flex;
@@ -55,10 +53,8 @@
 /* for dekstop */
 @media screen and (min-width: 1140px) {
     .articles {
-        margin: auto;
-        flex-direction: row;
-        justify-content: space-between;
-        margin: 60px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .article-card {
@@ -71,5 +67,13 @@
 
     .card-inside-link {
         text-align: right;
+    }
+}
+
+/* for dekstop */
+@media screen and (min-width: 769px) and (max-width: 1139px) {
+    .articles {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
