@@ -9,7 +9,9 @@
     --p-20: 120px;
 
     --fs-xl: 5rem;
+    --fs-ll: 4rem;
     --fs-l: 3rem;
+    --fs-xm: 2.5rem;
     --fs-m: 2rem;
     --fs-s: 1.5rem;
     --fs-xs: 1.25rem;
@@ -18,7 +20,9 @@
 @media screen and (max-width: 680px) {
     :root {
         --fs-xl: 3rem;
+        --fs-ll: 3rem;
         --fs-l: 2rem;
+        --fs-xm: 1.5rem;
         --fs-m: 1.5rem;
         --fs-s: 1.25rem;
         --fs-xs: 1rem;
