@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+        integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/nav-style.css">
+    <link rel="stylesheet" href="./css/nutrition.css">
+    <link rel="stylesheet" href="./css/article-preview.css">
+    <link rel="stylesheet" href="./css/footer-style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;700&display=swap');
+    </style>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar" x-data="{open: false}">
+        <div class="navbar-container">
+            <a href="./index.html">
+                <img src="./image/logo-navbar.png" alt="logo" class="navbar-logo">
+            </a>
+            <div class="navbar-link">
+                <a class="navbar-toggle" @click="open = !open"><img src="./image/navbar-icon.svg" alt=""></a>
+                <a href="our-product.html" class="navbar-link-item" :class="{'hidden-mobile': !open}">Our product</a>
+                <a href="./nutrition.html" class="active-nav navbar-link-item" :class="{'hidden-mobile': !open}">Nutrition</a>
+                <a href="" class="navbar-link-item" :class="{'hidden-mobile': !open}">Articles</a>
+                <a href="./faq.html" class="navbar-link-item" :class="{'hidden-mobile': !open}">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-img"></div>
+    <h1 class="title">Lets learn about nutrition</h1>
+
+    <section class="content">
+        <div class="h-card">
+            <img src="./image/card-cangkang.png" alt="" class="h-card-img">
+            <div class="h-card-text">
+                <h2 class="h-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat
+                    consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque
+                    aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus
+                    enim tristique Sed bibendum fermentum consectetur. Mauris auctor varius ipsum, et euismod metus
+                    commodo ac. In tincidunt purus id neque volutpat, nec fringilla tellus pellentesque. Aliquam in
+                    bibendum nunc. </p>
+            </div>
+        </div>
+
+        <div class="h-card">
+            <img src="./image/card-cangkang.png" alt="" class="h-card-img">
+            <div class="h-card-text">
+                <h2 class="h-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat
+                    consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque
+                    aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus
+                    enim tristique Sed bibendum fermentum consectetur. Mauris auctor varius ipsum, et euismod metus
+                    commodo ac. In tincidunt purus id neque volutpat, nec fringilla tellus pellentesque. Aliquam in
+                    bibendum nunc. </p>
+            </div>
+        </div>
+
+        <div class="h-card">
+            <img src="./image/card-cangkang.png" alt="" class="h-card-img">
+            <div class="h-card-text">
+                <h2 class="h-card-title">Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat
+                    consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque
+                    aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus
+                    enim tristique Sed bibendum fermentum consectetur. Mauris auctor varius ipsum, et euismod metus
+                    commodo ac. In tincidunt purus id neque volutpat, nec fringilla tellus pellentesque. Aliquam in
+                    bibendum nunc. </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="box-c">
+        <div class="box-c-img"></div>
+        <div class="box-c-down">
+            <h2 class="box-c-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus</h2>
+            <p class="box-c-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque aliquet nibh, vel condimentum nisl interdum et</p>
+        </div>
+    </section>
+
+    <h2 class="articles-header">Your Guide to a Healthy Pregnancy</h2>
+    <article class="articles">
+        <div class="article-card">
+            <a href="">
+                <img src="./image/article-1.png" alt="">
+                <h3>Nutrisi ibu hamil dan pertumbuhan janin</h3>
+                <a href="" class="card-inside-link">Read more ➜</a>
+            </a>
+        </div>
+        <div class="article-card">
+            <a href="">
+                <img src="./image/article-2.png" alt="">
+                <h3>Kesehatan anak dan pencegahan stunting</h3>
+                <a href="" class="card-inside-link">Read more ➜</a>
+            </a>
+        </div>
+        <div class="article-card">
+            <a href="">
+                <img src="./image/article-3.png" alt="">
+                <h3>Gerakan buMil sehat</h3>
+                <a href="" class="card-inside-link">Read more ➜</a>
+            </a>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-container">
+            <img src="./image/logo-navbar.png" alt="logo" class="navbar-logo">
+            <div class="footer-col">
+                <p>Product</p>
+                <a href="">Home</a>
+                <a href="">About</a>
+            </div>
+            
+            <div class="footer-col">
+                <p>Market</p>
+                <a href="">Shopee</a>
+                <a href="">Tokopedia</a>
+                <a href="">Instagram</a>
+            </div>
+            
+            <div class="footer-col">
+                <p>Contact</p>
+                <a href="">Email</a>
+                <a href="">Instagram</a>
+            </div>
+    
+            <div class="footer-col">
+                <p>Join our newsletter</p>
+                <div class="newsletter-form">
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
