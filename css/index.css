@@ -46,6 +46,17 @@
     margin: auto;
 }
 
+.hero-img {
+    max-width: 100%;
+    
+}
+
+/* @media screen and (min-width: 580px) {
+    .hero-img {
+        max-width: 500px;
+        height: auto;
+    }
+} */
 .hero-cta-btn {
     display: block;
     text-decoration: none;
