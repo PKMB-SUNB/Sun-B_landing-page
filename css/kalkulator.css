@@ -33,7 +33,7 @@ main {
     }
 }
 
-.plan-card {
+.gender-card {
     background-color: #fff;
     border-radius: var(--card-radius);
     position: relative;
@@ -43,7 +43,7 @@ main {
     margin-bottom: 0;
 }
 
-.plan-img {
+.gender-img {
     max-width: 76px;
     margin: 0 auto;
 }
@@ -71,7 +71,7 @@ main {
     }
 }
 
-.plan-details {
+.gender-details {
     border: var(--radio-border-width) solid var(--color-white);
     border-radius: var(--card-radius);
     cursor: pointer;
@@ -81,28 +81,28 @@ main {
     transition: border-color 0.2s ease-out;
 }
 
-.card:hover .plan-details {
+.card:hover .gender-details {
     border-color: var(--color-dark-gray);
 }
 
-.radio:checked~.plan-details {
+.radio:checked~.gender-details {
     border-color: var(--bg-dark);
 }
 
-.radio:focus~.plan-details {
+.radio:focus~.gender-details {
     box-shadow: 0 0 0 2px var(--color-dark-gray);
 }
 
-.radio:disabled~.plan-details {
+.radio:disabled~.gender-details {
     color: var(--color-dark-gray);
     cursor: default;
 }
 
-.radio:disabled~.plan-details .plan-type {
+.radio:disabled~.gender-details .gender-type {
     color: var(--color-dark-gray);
 }
 
-.card:hover .radio:disabled~.plan-details {
+.card:hover .radio:disabled~.gender-details {
     border-color: var(--color-white);
     box-shadow: none;
 }
@@ -111,7 +111,7 @@ main {
     border-color: var(--color-white);
 }
 
-.plan-type {
+.gender-type {
     color: var(--bg-dark);
     font-size: 1.5rem;
     font-weight: bold;
@@ -157,6 +157,8 @@ button {
     padding: 14px 28px;
     box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.10), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    border-style: none;
     background-color: var(--bg-dark);
     color: #fff;
+    margin: 10px 0 20px;
 }

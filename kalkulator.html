@@ -16,11 +16,10 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;700&display=swap');
     </style>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar" x-data="{open: false}">
+    <nav class="navbar">
         <div class="navbar-container">
             <a href="./index.html">
                 <img src="./image/logo-navbar.png" alt="logo" class="navbar-logo">
@@ -36,39 +35,33 @@
     </nav>
 
     <main x-data="calc_data">
-        <form action="/" method="get" @submit.prevent="">
+        <form action="/hasil-bmi2" method="get">
             <label>Pilih jenis kelamin anda!</label>
             <div class="grid">
-                <label class="plan-card">
-                    <input name="plan" class="radio" type="radio" value="laki-laki" @click="setKelamin('laki-laki')" required>
-                    <span class="plan-details" aria-hidden="true">
-                        <img src="./image/l-icon.png" alt="" class="plan-img">
-                        <span class="plan-type">Laki-Laki</span>
+                <label class="gender-card">
+                    <input name="gender" class="radio" type="radio" value="laki-laki" checked>
+                    <span class="gender-details" aria-hidden="true">
+                        <img src="./image/l-icon.png" alt="" class="gender-img">
+                        <span class="gender-type">Laki-Laki</span>
                     </span>
                 </label>
-                <label class="plan-card">
-                    <input name="plan" class="radio" type="radio" value="perempuan" @click="setKelamin('perempuan')">
-                    <span class="plan-details">
-                        <img src="./image/p-icon.png" alt="" class="plan-img">
-                        <span class="plan-type">Perempuan</span>
+                <label class="gender-card">
+                    <input name="gender" class="radio" type="radio" value="perempuan">
+                    <span class="gender-details">
+                        <img src="./image/p-icon.png" alt="" class="gender-img">
+                        <span class="gender-type">Perempuan</span>
                     </span>
                 </label>
             </div>
 
             <label for="usia-input">Berapa usia anda?</label>
-            <input type="number" name="usia" id="" placeholder="Usia (tahun)" x-model="data.usia">
+            <input type="number" name="usia" id="usia" placeholder="Usia (tahun)" required min="0" max="120">
             <label for="">Berapa berat badan anda?</label>
-            <input type="number" name="berat" id="" x-model="data.berat" placeholder="Berat Badan (kg)">
+            <input type="number" name="berat" id="berat" placeholder="Berat Badan (kg)" required min="0">
             <label for="">Berapa tinggi badan anda?</label>
-            <input type="number" name="tinggi" id="" x-model="data.tinggi" placeholder="Tinggi Badan (cm)">
+            <input type="number" name="tinggi" id="tinggi" placeholder="Tinggi Badan (cm)" required min="0">
             <button type="submit" @click="calculate">Hitung</button>
         </form>
-        <h2>Hasil BMI</h2>
-        <h3>
-            <span x-text="data.bmi">0</span>
-        </h3>
-        <h2>Anda memiliki berat badan <span x-text="kategori"></span></h2>
-        <button @click="tesUrl"></button>
     </main>
 
     <footer>
@@ -100,64 +93,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        document.addEventListener('alpine:init', () => {
-            Alpine.data('calc_data', () => ({
-                data: {
-                    "kelamin": "laki-laki",
-                    "usia": null,
-                    "berat": null,
-                    "tinggi": null,
-                    "bmi": null,
-                },
-
-                kategori: "init",
-
-                toggle() {
-                    console.log(this.data);
-                },
-
-                setKelamin(kelamin) {
-                    return () => {
-                        this.data.kelamin = kelamin;
-                        console.log(this.data);
-                    }
-                },
-
-                setUsia(usia) {
-                    this.data.usia = usia;
-                },
-
-                setBerat(berat) {
-                    this.data.berat = berat;
-                },
-
-                getData() {
-                    return this.data
-                },
-
-                tesUrl() {
-                    console.log(window.location.href)
-                },
-
-                calculate() {
-                    this.kategori = "initialized";
-                    if (isNaN(this.data.usia) || isNaN(this.data.berat) || isNaN(this.data.tinggi)) {
-                        console.log("is nan")
-                        return
-                    }
-                    let bmi = this.data.tinggi / 100;
-                    bmi *= bmi;
-                    bmi = this.data.berat / bmi;
-                    if (isNaN(bmi)) {
-                        this.data.bmi = 0
-                        return
-                    }
-                    this.data.bmi = bmi.toFixed(1);
-                }
-            }))
-        })
-    </script>
 </body>
 
 </html>
