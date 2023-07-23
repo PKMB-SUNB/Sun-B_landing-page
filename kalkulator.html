@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+        integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/nav-style.css">
+    <link rel="stylesheet" href="./css/kalkulator.css">
+    <link rel="stylesheet" href="./css/articles.css">
+    <link rel="stylesheet" href="./css/footer-style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;700&display=swap');
+    </style>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar" x-data="{open: false}">
+        <div class="navbar-container">
+            <a href="./index.html">
+                <img src="./image/logo-navbar.png" alt="logo" class="navbar-logo">
+            </a>
+            <div class="navbar-link">
+                <a class="navbar-toggle" @click="open = !open"><img src="./image/navbar-icon.svg" alt=""></a>
+                <a href="our-product.html" class="navbar-link-item" :class="{'hidden-mobile': !open}">Our product</a>
+                <a href="./nutrition.html" class="navbar-link-item" :class="{'hidden-mobile': !open}">Nutrition</a>
+                <a href="./articles.html" class="navbar-link-item" :class="{'hidden-mobile': !open}">Articles</a>
+                <a href="./faq.html" class="navbar-link-item" :class="{'hidden-mobile': !open}">FAQ</a>
+            </div>
+        </div>
+    </nav>
+
+    <main x-data="calc_data">
+        <form action="/" method="get" @submit.prevent="">
+            <label>Pilih jenis kelamin anda!</label>
+            <div class="grid">
+                <label class="plan-card">
+                    <input name="plan" class="radio" type="radio" value="laki-laki" @click="setKelamin('laki-laki')" required>
+                    <span class="plan-details" aria-hidden="true">
+                        <img src="./image/l-icon.png" alt="" class="plan-img">
+                        <span class="plan-type">Laki-Laki</span>
+                    </span>
+                </label>
+                <label class="plan-card">
+                    <input name="plan" class="radio" type="radio" value="perempuan" @click="setKelamin('perempuan')">
+                    <span class="plan-details">
+                        <img src="./image/p-icon.png" alt="" class="plan-img">
+                        <span class="plan-type">Perempuan</span>
+                    </span>
+                </label>
+            </div>
+
+            <label for="usia-input">Berapa usia anda?</label>
+            <input type="number" name="usia" id="" placeholder="Usia (tahun)" x-model="data.usia">
+            <label for="">Berapa berat badan anda?</label>
+            <input type="number" name="berat" id="" x-model="data.berat" placeholder="Berat Badan (kg)">
+            <label for="">Berapa tinggi badan anda?</label>
+            <input type="number" name="tinggi" id="" x-model="data.tinggi" placeholder="Tinggi Badan (cm)">
+            <button type="submit" @click="calculate">Hitung</button>
+        </form>
+        <h2>Hasil BMI</h2>
+        <h3>
+            <span x-text="data.bmi">0</span>
+        </h3>
+        <h2>Anda memiliki berat badan <span x-text="kategori"></span></h2>
+        <button @click="tesUrl"></button>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <img src="./image/logo-navbar.png" alt="logo" class="navbar-logo">
+            <div class="footer-col">
+                <p>Product</p>
+                <a href="">Home</a>
+                <a href="">About</a>
+            </div>
+
+            <div class="footer-col">
+                <p>Market</p>
+                <a href="">Shopee</a>
+                <a href="">Tokopedia</a>
+                <a href="">Instagram</a>
+            </div>
+
+            <div class="footer-col">
+                <p>Contact</p>
+                <a href="">Email</a>
+                <a href="">Instagram</a>
+            </div>
+
+            <div class="footer-col">
+                <p>Join our newsletter</p>
+                <div class="newsletter-form">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('calc_data', () => ({
+                data: {
+                    "kelamin": "laki-laki",
+                    "usia": null,
+                    "berat": null,
+                    "tinggi": null,
+                    "bmi": null,
+                },
+
+                kategori: "init",
+
+                toggle() {
+                    console.log(this.data);
+                },
+
+                setKelamin(kelamin) {
+                    return () => {
+                        this.data.kelamin = kelamin;
+                        console.log(this.data);
+                    }
+                },
+
+                setUsia(usia) {
+                    this.data.usia = usia;
+                },
+
+                setBerat(berat) {
+                    this.data.berat = berat;
+                },
+
+                getData() {
+                    return this.data
+                },
+
+                tesUrl() {
+                    console.log(window.location.href)
+                },
+
+                calculate() {
+                    this.kategori = "initialized";
+                    if (isNaN(this.data.usia) || isNaN(this.data.berat) || isNaN(this.data.tinggi)) {
+                        console.log("is nan")
+                        return
+                    }
+                    let bmi = this.data.tinggi / 100;
+                    bmi *= bmi;
+                    bmi = this.data.berat / bmi;
+                    if (isNaN(bmi)) {
+                        this.data.bmi = 0
+                        return
+                    }
+                    this.data.bmi = bmi.toFixed(1);
+                }
+            }))
+        })
+    </script>
+</body>
+
+</html>
