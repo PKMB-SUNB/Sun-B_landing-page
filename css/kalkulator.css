@@ -14,12 +14,37 @@
     flex-direction: column;
 }
 
+.faq-header {
+    background-color: var(--background-dark);
+}
+
+.faq-container {
+    max-width: 1200px;
+    padding: 80px 40px;
+    color: var(--white);
+    margin: 0 auto 80px;
+
+    @media (min-width: 1200px) {
+        padding: 80px 0;
+    }
+}
+
+.faq-header h1 {
+    color: var(--white);
+    font-size: var(--fs-l);
+    font-family: Outfit;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-align: left;
+}
+
 main {
     max-width: 1200px;
     margin: 0 40px;
 
     @media (min-width: 1200px) {
-        margin: 0 auto;
+        margin: 0 auto 80px;
     }
 }
 
