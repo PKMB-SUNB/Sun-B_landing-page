@@ -10,7 +10,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/nav-style.css">
-    <link rel="stylesheet" href="./css/kalkulator.css">
+    <link rel="stylesheet" href="./css/hasil-bmi.css">
     <link rel="stylesheet" href="./css/articles.css">
     <link rel="stylesheet" href="./css/footer-style.css">
     <style>
@@ -35,12 +35,34 @@
         </div>
     </nav>
 
-    <main x-data="calc_data">
-        <h2>Hasil BMI</h2>
+    <main x-data="calc_data" class="hasil-container">
+        <h2 class="hasil-header">Hasil BMI</h2>
         <h3>
-            <span x-text="data.bmi">0</span>
+            <span x-text="data.bmi" class="hasil-data">0</span>
         </h3>
-        <h2>Anda memiliki berat badan <span x-text="kategori"></span></h2>
+        <h2 class="hasil-kategori">Anda memiliki berat badan <span class="hasil-kategori-nilai" x-text="kategori"></span></h2>
+
+        <div class="daftar-container">
+            <div class="daftar-container-content">
+                <p class="daftar-nilai">< 18.5</p>
+                <p class="daftar-hasil">Kekurangan Bobot</p>
+            </div>
+            <hr/>
+            <div class="daftar-container-content">
+                <p class="daftar-nilai">18.5 - 24.9</p>
+                <p class="daftar-hasil">Sehat</p>
+            </div>
+            <hr/>
+            <div class="daftar-container-content">
+                <p class="daftar-nilai">25 - 29.9</p>
+                <p class="daftar-hasil">Kelebihan Bobot</p>
+            </div>
+            <hr/>
+            <div class="daftar-container-content">
+                <p class="daftar-nilai">> 29.9</p>
+                <p class="daftar-hasil">Obesitas</p>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -51,7 +73,6 @@
                 <a href="">Home</a>
                 <a href="">About</a>
             </div>
-
             <div class="footer-col">
                 <p>Market</p>
                 <a href="">Shopee</a>
@@ -106,7 +127,9 @@
 
                 calculate() {
                     // this.kategori = "initialized";
-                    if (isNaN(this.data.usia) || isNaN(this.data.berat) || isNaN(this.data.tinggi)) {
+                    if (isNaN(this.data.usia)
+                        || isNaN(this.data.berat)
+                        || isNaN(this.data.tinggi)) {
                         console.log("is nan");
                         return;
                     }
@@ -122,8 +145,10 @@
                 },
 
                 setKategori(bmi) {
-                    if (bmi < 18.5) return "kekurangan bobot";
-                    if (bmi < 25 && bmi <= 18.5) return "sehat";
+                    if (bmi < 18.5) return "Kekurangan bobot";
+                    if (bmi < 25 && bmi >= 18.5) return "Sehat";
+                    if (bmi < 30 && bmi >= 25) return "Kelebihan Bobot";
+                    if (bmi >= 30) return "Obesitas";
                 }
             }))
         })
