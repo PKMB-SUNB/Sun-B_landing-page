@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FaQ</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css" integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+        integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/nav-style.css">
     <link rel="stylesheet" href="./css/faq.css">
@@ -14,6 +17,7 @@
     </style>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
+
 <body>
     <nav class="navbar" x-data="{open: false}">
         <div class="navbar-container">
@@ -33,10 +37,13 @@
     <section class="faq-header">
         <div class="faq-container">
             <h1>Frequently Asked Questions</h1>
-            <p>Ingin tahu tentang sorgum? Penasaran soal kelor? Tertarik pada kalsium?  Kami menerima semua pertanyaan tentang sereal snack pencegah stunting yang lezat. Klik di bawah untuk menemukan jawaban salah satu pertanyaan yang sering diajukan.  Jika Anda tidak bisa menemukan jawaban untuk pertanyaan Anda, hubungi kami dan kami akan dengan senang hati membantu.</p>
+            <p>Ingin tahu tentang sorgum? Penasaran soal kelor? Tertarik pada kalsium? Kami menerima semua pertanyaan
+                tentang sereal snack pencegah stunting yang lezat. Klik di bawah untuk menemukan jawaban salah satu
+                pertanyaan yang sering diajukan. Jika Anda tidak bisa menemukan jawaban untuk pertanyaan Anda, hubungi
+                kami dan kami akan dengan senang hati membantu.</p>
         </div>
     </section>
-    
+
     <section class="faq-content">
         <div x-data="{open: false}">
             <div class="faq-card" @click="open = !open">
@@ -45,7 +52,10 @@
             </div>
             <div x-show="open" class="answer-card" @click="open = !open" x-transition>
                 <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus enim tristique. Sed bibendum fermentum consectetur. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat
+                    consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque
+                    aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus
+                    enim tristique. Sed bibendum fermentum consectetur. </p>
             </div>
         </div>
         <div x-data="{open: false}">
@@ -55,7 +65,10 @@
             </div>
             <div x-show="open" class="answer-card" @click="open = !open" x-transition>
                 <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus enim tristique. Sed bibendum fermentum consectetur. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat
+                    consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque
+                    aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus
+                    enim tristique. Sed bibendum fermentum consectetur. </p>
             </div>
         </div>
         <div x-data="{open: false}">
@@ -65,7 +78,10 @@
             </div>
             <div x-show="open" class="answer-card" @click="open = !open" x-transition>
                 <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus enim tristique. Sed bibendum fermentum consectetur. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat
+                    consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque
+                    aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus
+                    enim tristique. Sed bibendum fermentum consectetur. </p>
             </div>
         </div>
         <div x-data="{open: false}">
@@ -75,7 +91,10 @@
             </div>
             <div x-show="open" class="answer-card" @click="open = !open" x-transition>
                 <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus enim tristique. Sed bibendum fermentum consectetur. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat
+                    consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque
+                    aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus
+                    enim tristique. Sed bibendum fermentum consectetur. </p>
             </div>
         </div>
         <div x-data="{open: false}">
@@ -85,7 +104,10 @@
             </div>
             <div x-show="open" class="answer-card" @click="open = !open" x-transition>
                 <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus enim tristique. Sed bibendum fermentum consectetur. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat
+                    consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque
+                    aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus
+                    enim tristique. Sed bibendum fermentum consectetur. </p>
             </div>
         </div>
         <div x-data="{open: false}">
@@ -95,7 +117,10 @@
             </div>
             <div x-show="open" class="answer-card" @click="open = !open" x-transition>
                 <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus enim tristique. Sed bibendum fermentum consectetur. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat
+                    consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque
+                    aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus
+                    enim tristique. Sed bibendum fermentum consectetur. </p>
             </div>
         </div>
         <div x-data="{open: false}">
@@ -105,7 +130,10 @@
             </div>
             <div x-show="open" class="answer-card" @click="open = !open" x-transition>
                 <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus enim tristique. Sed bibendum fermentum consectetur. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat
+                    consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque
+                    aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus
+                    enim tristique. Sed bibendum fermentum consectetur. </p>
             </div>
         </div>
         <div x-data="{open: false}">
@@ -115,7 +143,10 @@
             </div>
             <div x-show="open" class="answer-card" @click="open = !open" x-transition>
                 <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit?</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus enim tristique. Sed bibendum fermentum consectetur. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla faucibus libero in tellus consequat
+                    consectetur. Sed ut malesuada nisl. Nullam consequat placerat rhoncus. Suspendisse pellentesque
+                    aliquet nibh, vel condimentum nisl interdum et. Ut gravida leo in diam vestibulum, vitae maximus
+                    enim tristique. Sed bibendum fermentum consectetur. </p>
             </div>
         </div>
     </section>
@@ -125,30 +156,30 @@
             <img src="./image/logo-navbar.png" alt="logo" class="navbar-logo">
             <div class="footer-col">
                 <p>Product</p>
-                <a href="">Home</a>
-                <a href="">About</a>
+                <a href="./index.html">Home</a>
+                <a href="./our-product.html">About</a>
             </div>
-            
+
             <div class="footer-col">
                 <p>Market</p>
                 <a href="">Shopee</a>
                 <a href="">Tokopedia</a>
-                <a href="">Instagram</a>
+                <a href="https://instagram.com/sunb.official?igshid=YzcxN2Q2NzY0OA==">Instagram</a>
             </div>
-            
+
             <div class="footer-col">
                 <p>Contact</p>
-                <a href="">Email</a>
-                <a href="">Instagram</a>
+                <a href="https://mail.google.com/mail/u/0/?fs=1&to=pkmksunb2023@gmail.com&tf=cm">Email</a>
+                <a href="https://instagram.com/sunb.official?igshid=YzcxN2Q2NzY0OA==">Instagram</a>
             </div>
-    
+
             <div class="footer-col">
                 <p>Join our newsletter</p>
                 <div class="newsletter-form">
-                    
                 </div>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
