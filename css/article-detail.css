@@ -42,6 +42,7 @@
 
 .article-w-img-rev {
     background-color: var(--background-dark);
+    color: var(--white);
 }
 
 @media screen and (max-width: 1280px) {
@@ -53,8 +54,16 @@
         padding: 0 40px;
     }
 
+    .article-sub-title {
+        padding: 0 40px;
+    }
+
     .article-w-img-rev {
         padding: 40px;
+    }
+
+    ul {
+        padding: 0 40px;
     }
 }
 
@@ -70,7 +79,6 @@
         background-color: var(--background-dark);
         column-gap: 40px;
         padding: 40px;
-        color: var(--white);
     }
 }
 
