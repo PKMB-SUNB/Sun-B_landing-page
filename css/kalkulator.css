@@ -3,6 +3,7 @@
     --card-padding: 1em;
     --card-radius: 0.5em;
     --bg-dark: #8E2800;
+    --bg-header-light: #B64A26;
     --color-white: #fff;
 
     --radio-border-width: 2px;
@@ -27,7 +28,7 @@
     max-width: 1200px;
 
     color: var(--white);
-    background-color: var(--background-dark);
+    background-color: var(--bg-header-light);
 }
 
 .faq-container {
@@ -198,4 +199,33 @@ button {
     background-color: var(--bg-dark);
     color: #fff;
     margin: 10px 0 20px;
+}
+
+.chart-img-container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+@media screen and (min-width: 1300px) {
+    .chart-img-container {
+        flex-direction: row;
+    }
+    .chart-img {
+        width: 45%;
+    }
+}
+
+.chart-text {
+    color: #8F2901;
+
+    text-align: justify;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27.5px;
+    /* 137.5% */
+    letter-spacing: 0.4px;
 }
