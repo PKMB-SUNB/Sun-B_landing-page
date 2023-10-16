@@ -18,6 +18,18 @@
     background-color: var(--background-dark);
 }
 
+.title {
+    text-align: center;
+    font-family: Outfit;
+    font-size: var(--fs-l);
+    padding: 40px 20px;
+    margin: 40px 40px;
+    max-width: 1200px;
+
+    color: var(--white);
+    background-color: var(--background-dark);
+}
+
 .faq-container {
     max-width: 1200px;
     padding: 80px 40px;
